@@ -1,0 +1,8 @@
+<body>
+  <h1>{{ title }}</h1>
+  <button *ngFor='let i of boolean, let idx = index'
+    [ngClass]='{
+      "red": !i,
+      "green": i
+    }' (click)='button(idx)'> {{ words[idx] }}</button>
+</body>
